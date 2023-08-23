@@ -1,0 +1,44 @@
+.header{
+    transition: all ease 0.2s;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
+    align-items: center;
+    display: flex;
+}
+.header.show{
+    color: rgb(0, 0, 0);
+    background: white;
+    top: 0;
+}
+.header .logo{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+.header .logo img{
+    width: 90px;
+    height: auto;
+}
+.header .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+.header p{
+    font-size: 12px;
+}
+.header .aviso{
+    width: 25%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+}
