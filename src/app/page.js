@@ -1,9 +1,16 @@
+"use client";
 import Image from 'next/image'
+import { useEffect } from 'react';
 import { Header } from './Header/Header'
 import Banner from "./image/BANNER.jpg"
+import Sutia from "./image/sutia.jpg"
+import Conj from "./image/conj.webp"
+import Calcinha from "./image/calcinha.webp"
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 
 export default function Home() {
+
+
   return (
     <div className='app'>
       <Header></Header>
@@ -27,12 +34,17 @@ export default function Home() {
       <section className='banner'>
         <p>O Toque especial no seu estilo</p>
       </section>
-      <section>
+      <section className='catalogo'>
         <p>EXPLORE NOSSO CATÁLOGO</p>
         <div className='roupas'>
-          <div className="exibir">
-            <Image src={}></Image>
+          <div className="exibir" >
             <p>SUTIÃNS</p>
+          </div>
+          <div className="exibir">
+            <p>Conjuntos</p>
+          </div>
+          <div className="exibir">
+            <p>Calcinhas</p>
           </div>
         </div>
       </section>

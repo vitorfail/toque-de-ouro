@@ -37,6 +37,7 @@
   font-weight: 700;
 }
 .app{
+  overflow-y: auto;
   position: fixed;
   width: 100%;
   font-weight: 200;
@@ -62,6 +63,7 @@
   height: 80vh;
 }
 .app .banner p{
+  color: white;
   width: 100%;
   height: 100%;
   display: flex;
@@ -69,6 +71,45 @@
   justify-content: center;
   font-family: url("./Roboto/PlayfairDisplay-Bold.ttf");
   font-size: 40px;
+}
+.app .catalogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+}
+.app .catalogo .roupas{
+  width: 80%;
+  height: 500px;  
+  display: flex;
+  justify-content: space-between;
+}
+.app .catalogo .exibir{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 300px;
+  height: 100%;
+}
+.app .catalogo .exibir:nth-child(1){
+  background: url("./image/sutia.jpg");
+  background-size: cover;
+}
+.app .catalogo .exibir:nth-child(2){
+  background: url("./image/calcinha.webp");
+  background-size: cover;
+}
+.app .catalogo .exibir:nth-child(3){
+  background: url("./image/conj.webp");
+  background-size: cover;
+}
+.app .catalogo .exibir p{
+
+}
+.app .catalogo .exibir img{
+  width: 100%;
+  height: 100%;
 }
 .banner img{
   width: 100%;
