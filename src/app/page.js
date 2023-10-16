@@ -38,13 +38,19 @@ export default function Home() {
         <p>EXPLORE NOSSO CATÁLOGO</p>
         <div className='roupas'>
           <div className="exibir" >
-            <p>SUTIÃNS</p>
+            <div className='text'>
+              <p>SUTIÃNS</p>
+            </div>
           </div>
           <div className="exibir">
-            <p>Conjuntos</p>
+            <div className='text'>
+              <p>SUTIÃNS</p>
+            </div>
           </div>
           <div className="exibir">
-            <p>Calcinhas</p>
+            <div className='text'>
+              <p>SUTIÃNS</p>
+            </div>
           </div>
         </div>
       </section>

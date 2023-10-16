@@ -6,20 +6,24 @@ import { useEffect, useState } from "react";
 
 export function Header(){
     const [head, sethead] = useState(false)
-    const handleScroll = () => {
-      // Lógica para lidar com o evento de rolagem
-      console.log('A página foi rolada!');
-    };
+    const scrollevent = () =>{
+      if(window.scrollY> 10){
+        sethead(true)
+      }
+      else{
+        sethead(false)
+      }
+    }
   
     useEffect(() => {
       // Adiciona o ouvinte de evento quando o componente monta
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', scrollevent);
   
       // Remove o ouvinte de evento quando o componente desmonta
       return () => {
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', scrollevent);
       };
-    }, [handleScroll]); // Certifique-se de incluir handleResize no array de dependências
+    }, []); // Certifique-se de incluir handleResize no array de dependências
   
     return(
         <div className={head? "header show": "header"}>
