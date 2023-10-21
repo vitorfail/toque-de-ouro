@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
       <section className='banner'>
-        <p>O Toque especial no seu estilo</p>
+        <p>O Toque especial <br/>no seu estilo</p>
       </section>
       <section className='catalogo'>
         <p>EXPLORE NOSSO CATÁLOGO</p>

@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../Roboto/RobotoCondensed-Light.ttf");
+}
 .header{
     transition: all ease 0.2s;
     position: fixed;
@@ -13,6 +17,7 @@
     color: rgb(0, 0, 0);
     background: white;
     top: 0;
+    border-bottom: 0.2px solid rgba(0, 0, 0, 0.288);
 }
 .header .logo{
     justify-content: center;
@@ -28,13 +33,20 @@
 .header .menu{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100%;
     width: 50%;
 }
 .header p{
-    font-size: 20px;
-    font-weight: 700;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+    cursor: pointer;
+    letter-spacing: .1em;
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+    margin: 9px;
 }
 .header .aviso{
     width: 25%;
