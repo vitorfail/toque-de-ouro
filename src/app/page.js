@@ -35,21 +35,28 @@ export default function Home() {
         <p>O Toque especial <br/>no seu estilo</p>
       </section>
       <section className='catalogo'>
-        <p>EXPLORE NOSSO CATÁLOGO</p>
+        <p>EXPLORE E ESCOLHA</p>
+        <p>CATÁLOGO</p>
         <div className='roupas'>
           <div className="exibir" >
-            <div className='text'>
-              <p>SUTIÃNS</p>
+            <div className='hover'>
+              <div className='text'>
+                <p>SUTIÃNS</p>
+              </div>
             </div>
           </div>
           <div className="exibir">
-            <div className='text'>
-              <p>SUTIÃNS</p>
+            <div className='hover'>
+              <div className='text'>
+                <p>SUTIÃNS</p>
+              </div>
             </div>
           </div>
           <div className="exibir">
-            <div className='text'>
-              <p>SUTIÃNS</p>
+            <div className='hover'>
+              <div className='text'>
+                <p>SUTIÃNS</p>
+              </div>
             </div>
           </div>
         </div>
