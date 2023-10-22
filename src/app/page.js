@@ -1,11 +1,18 @@
 "use client";
 import Image from 'next/image'
-import { useEffect } from 'react';
 import { Header } from './Header/Header'
 import Banner from "./image/BANNER.jpg"
 import Sutia from "./image/sutia.jpg"
 import Conj from "./image/conj.webp"
 import Calcinha from "./image/calcinha.webp"
+import  ReactMapGL, {Marker} from 'react-map-gl'
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+import { useEffect, useState } from 'react';
+const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN1NjI0ZjUifQ.dYaH3rrTcs8WwFHCHCSCRQ';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 
 export default function Home() {
@@ -61,6 +68,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className='Map'>
+        <ReactMapGL
+          initialViewState={{
+            latitude: -7.26839,
+            longitude: -39.3434,
+            zoom: 11
+          }}
+
+          mapStyle="mapbox://styles/mapbox/dark-v9"
+          mapboxAccessToken={MAPBOX_TOKEN}>
+        </ReactMapGL>
+      </div>
+
     </div>
   )
 }

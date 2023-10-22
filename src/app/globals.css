@@ -129,6 +129,10 @@
   width: 100%;
   height: 100%;
 }
+.app .Map{
+  height: 700px;
+  width: 100%;
+}
 .banner img{
   width: 100%;
   height: 80vh;
