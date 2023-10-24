@@ -1,11 +1,13 @@
 'use client';
 import Image from "next/image"
 import "./Header.css"
+import li from "../menu";
 import Logo from "../image/logo2.png"
 import { useEffect, useState } from "react";
 
 export function Header(){
     const [head, sethead] = useState(false)
+    
     const scrollevent = () =>{
       if(window.scrollY> 10){
         sethead(true)
@@ -24,19 +26,21 @@ export function Header(){
         window.removeEventListener('scroll', scrollevent);
       };
     }, []); // Certifique-se de incluir handleResize no array de dependências
-  
+    function menu(){
+
+    }
     return(
+      <div>
         <div className={head? "header show": "header"}>
             <div className="logo">
-                <Image src={Logo} alt="logo"></Image>
+                <div className="img"></div>
             </div>
             <div className="menu">
-                <p>HOME</p>
-                <p>CATÁLOGO 1</p>
-                <p>CATÁLOGO 2</p>
-                <p>CATÁLOGO 3</p>
-                <p>SOBRE NÓS</p>
+              {li.map((item, key) => (
+                <p key={key}>{item}</p>
+              ))}
             </div>
         </div>
+      </div>
     )
 }

@@ -1,10 +1,8 @@
 "use client";
 import Image from 'next/image'
 import { Header } from './Header/Header'
-import Banner from "./image/BANNER.jpg"
-import Sutia from "./image/sutia.jpg"
-import Conj from "./image/conj.webp"
-import Calcinha from "./image/calcinha.webp"
+import Lista from "././image/list.png"
+import Logo from "././image/logo1.png"
 import  ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
@@ -14,13 +12,17 @@ const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
+import Seta from './Seta';
 
 export default function Home() {
-
-
   return (
     <div className='app'>
+      <Seta></Seta>
       <Header></Header>
+      <div className='cabecalho'>
+        <Image style={{width:"20px", height:"20px"}} src={Lista}></Image>
+        <Image style={{width:"40px", height:"40px"}} src={Logo}></Image>
+      </div>
       <section className='info'>
         <div className='whats'>
           <p> (88) 9878-9999</p>
@@ -68,18 +70,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='Map'>
-        <ReactMapGL
-          initialViewState={{
-            latitude: -7.26839,
-            longitude: -39.3434,
-            zoom: 11
-          }}
+      <section className='mapa'>
+        <div className='descri'>
+          <p>Visite nossas lojas</p>
+          <p>Temos 4 lojas para entender nossos clientes da região do Cariri. Duas estão localizar no Crato e duas na cidade de Juazeiro</p>
+        </div>
+        <div className='Map'>
+          <ReactMapGL
+            initialViewState={{
+              latitude: -7.23139,
+              longitude: -39.3584,
+              zoom: 11
+            }}
 
-          mapStyle="mapbox://styles/mapbox/dark-v9"
-          mapboxAccessToken={MAPBOX_TOKEN}>
-        </ReactMapGL>
-      </div>
+            mapStyle="mapbox://styles/mapbox/dark-v9"
+            mapboxAccessToken={MAPBOX_TOKEN}>
+                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.22125098841004} longitude={-39.41171401554243}  kanchor="bottom" >
+                </Marker>
+                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.232346847875012} longitude={-39.41059401579593}  kanchor="bottom" >
+                </Marker>
+                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}}  latitude={-7.204351276105135} longitude={-39.318201469313834}  kanchor="bottom" >
+                </Marker>
+                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.206048803737471} longitude={-39.31790665397074}  kanchor="bottom" >
+                </Marker>
+          </ReactMapGL>
+        </div>
+
+      </section>
 
     </div>
   )
