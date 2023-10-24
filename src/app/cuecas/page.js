@@ -1,8 +1,8 @@
 "use client";
 import Image from 'next/image'
-import { Header } from './Header/Header'
-import Lista from "./image/list.png"
-import Logo from "./image/logo1.png"
+import { Header } from '../Header/Header'
+import Lista from "../image/list.png"
+import Logo from "../image/logo1.png"
 import  ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
@@ -12,7 +12,7 @@ const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
-import Seta from './Seta';
+import Seta from '../Seta';
 
 export default function Home() {
   return (
