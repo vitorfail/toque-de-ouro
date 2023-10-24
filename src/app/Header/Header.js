@@ -2,6 +2,7 @@
 import Image from "next/image"
 import "./Header.css"
 import li from "../menu";
+import Seta from "../image/seta.png"
 import Logo from "../image/logo2.png"
 import { useEffect, useState } from "react";
 
@@ -37,7 +38,13 @@ export function Header(){
             </div>
             <div className="menu">
               {li.map((item, key) => (
-                <p key={key}>{item}</p>
+                <div className="item">
+                  <div className="titulo">
+                    <p key={key}>{item}</p>
+                    <Image src={Seta} height={15} width={15}></Image>
+                  </div>
+                  <span className="linha"></span>
+                </div>
               ))}
             </div>
         </div>

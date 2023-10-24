@@ -35,6 +35,16 @@
   height: 30px;
   background: black;
 }
+.app .info .whats{
+  display: flex;
+}
+
+.app .info .whats p{
+  font-family: "Roboto";
+  line-height: 1.1;
+  letter-spacing: .1em;
+  display: flex;
+}
 .app .info p{
   font-weight: 600;
   font-size: 11px;
@@ -193,7 +203,6 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto";
-  font-weight: 200;
 }
 @media (max-width:700px) {
   .app .info{
