@@ -28,6 +28,7 @@
   margin-right: 20px;
 }
 .app .info{
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,8 +36,15 @@
   height: 30px;
   background: black;
 }
+.app .meio{
+  width: 50%;
+}
 .app .info .whats{
+  width: 25%;
   display: flex;
+}
+.app .icons{
+  width: 25%;
 }
 
 .app .info .whats p{

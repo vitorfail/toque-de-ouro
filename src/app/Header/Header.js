@@ -47,6 +47,9 @@ export function Header(){
                 </div>
               ))}
             </div>
+            <div className="aviso">
+              Compra agora!
+            </div>
         </div>
       </div>
     )

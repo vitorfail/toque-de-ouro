@@ -28,6 +28,7 @@ export default function Home() {
           <p> (88) 9878-9999</p>
           <p>Da segunda ao sábado, das 8:00 as 17:30</p>
         </div>
+        <div className='meio'></div>
         <div className="icons">
               <a href="https://www.instagram.com/vitor_andrademanoel04/" target="_blank">
                   <AiFillFacebook color="white"></AiFillFacebook>
