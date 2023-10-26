@@ -37,16 +37,25 @@
   background: black;
 }
 .app .meio{
-  width: 50%;
+  width: 30%;
 }
 .app .info .whats{
-  width: 25%;
+  justify-content: flex-start;
+  width: 35%;
   display: flex;
 }
 .app .icons{
-  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
 }
-
+.app .icons a{
+  margin: 10px;
+}
+.app .info .whats p:nth-child(1){
+  margin-left: 170px;
+}
 .app .info .whats p{
   font-family: "Roboto";
   line-height: 1.1;
@@ -205,6 +214,9 @@
 .app .img{
   border-radius: 50%;
   background: rgb(208, 255, 0);
+}
+.app .produto-destaque{
+  width: 100%;
 }
 * {
   box-sizing: border-box;

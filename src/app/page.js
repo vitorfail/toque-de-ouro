@@ -31,13 +31,13 @@ export default function Home() {
         <div className='meio'></div>
         <div className="icons">
               <a href="https://www.instagram.com/vitor_andrademanoel04/" target="_blank">
-                  <AiFillFacebook color="white"></AiFillFacebook>
+                  <AiFillFacebook size={20} color="white"></AiFillFacebook>
               </a>
               <a href="https://www.linkedin.com/in/vitor-manoel-programer/" target="_blank">
-                  <AiFillYoutube color="white"></AiFillYoutube>
+                  <AiFillYoutube size={20} color="white"></AiFillYoutube>
               </a>
               <a href="https://github.com/vitorfail" target="_blank">
-                  <AiFillInstagram color="white"></AiFillInstagram>
+                  <AiFillInstagram size={20} color="white"></AiFillInstagram>
               </a>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function Home() {
                 </Marker>
           </ReactMapGL>
         </div>
-
+        <div className='produto-destaque'></div>
       </section>
 
     </div>
