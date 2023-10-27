@@ -216,6 +216,8 @@
   background: rgb(208, 255, 0);
 }
 .app .produto-destaque{
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 * {

@@ -6,7 +6,9 @@ import Logo from "./image/logo1.png"
 import  ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
+import produtos from './produtos';
 import { useEffect, useState } from 'react';
+import { Card, Cards } from './Card';
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN1NjI0ZjUifQ.dYaH3rrTcs8WwFHCHCSCRQ';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
@@ -96,8 +98,12 @@ export default function Home() {
                 </Marker>
           </ReactMapGL>
         </div>
-        <div className='produto-destaque'></div>
       </section>
+      <div className='produto-destaque'>
+          {produtos.map((item, index) => (
+            <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} ></Card>
+          ))}
+        </div>
 
     </div>
   )

@@ -1,10 +1,9 @@
 'use client';
 import "./index.css"
-
 export function Card(props){
     return(
       <div className="card">
-        <div className="modelo" style={{background:"url("+props.url+")", backgroundRepeat:"no-repeat", backgroundPosition:"center"}}>
+        <div className="modelo" style={{backgroundImage:`url(${props.url})`,backgroundSize:"contain", backgroundRepeat:"no-repeat", backgroundPosition:"center"}}>
           <div className="qtd">
             <p>{props.qtd}</p>
           </div>
