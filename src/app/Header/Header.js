@@ -38,9 +38,9 @@ export function Header(){
             </div>
             <div className="menu">
               {li.map((item, key) => (
-                <div className="item">
+                <div key={key} className="item">
                   <div className="titulo">
-                    <p key={key}>{item}</p>
+                    <p>{item}</p>
                     <Image src={Seta} height={15} width={15}></Image>
                   </div>
                   <span className="linha"></span>

@@ -100,9 +100,12 @@ export default function Home() {
         </div>
       </section>
       <div className='produto-destaque'>
-          {produtos.map((item, index) => (
-            <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} ></Card>
-          ))}
+          <p className='titulo'>PRODUTOS MAIS VENDIDOS</p>
+          <div style={{width:"100%", display:"flex", justifyContent:"space-evenly"}}>
+            {produtos.map((item, index) => (
+              <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} ></Card>
+            ))}
+          </div>
         </div>
 
     </div>

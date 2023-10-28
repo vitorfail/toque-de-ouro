@@ -20,6 +20,9 @@
     top: 0;
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.288);
 }
+.header.show .item .titulo img {
+    opacity: 0;
+}
 .header.show .logo .img{
     background: url("../image/logo1.png");
     background-repeat: no-repeat;
@@ -80,7 +83,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 7px;
+    margin: 2px;
 }
 .header span{
     margin-top: -6px;
@@ -98,8 +101,8 @@
 }
 .header p{
     font-family: "Roboto";
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 580;
+    font-size: 15px;
     line-height: 1.1;
     cursor: pointer;
     letter-spacing: .1em;
@@ -112,8 +115,9 @@
     display: flex;
 }
 .header .item .titulo img{
-    transition: all 0.2s ease-in-out;
-    margin-left: -1px;
+    opacity: initial;
+    transition: all 0.1s ease-in-out;
+    margin-left: -7px;
     transform: rotate(-180deg);
 }
 @media screen and (max-width:700px) {

@@ -35,7 +35,13 @@
     width: 80px;
     height: 25px;
     color: white;
-    background: #ea3253;
+    background: #ea3253;  
+}
+.card .nome, .card .preco{
+    margin-top: 10px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: .3em; 
 }
 .card .nome{
     width: 100%;
