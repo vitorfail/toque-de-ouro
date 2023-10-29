@@ -9,16 +9,15 @@ import mapboxgl from 'mapbox-gl';
 import produtos from './produtos';
 import { useEffect, useState } from 'react';
 import { Card, Cards } from './Card';
-import { Context } from './provide';
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN1NjI0ZjUifQ.dYaH3rrTcs8WwFHCHCSCRQ';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from './Seta';
+import { Rodape } from './Rodape';
 
 export default function Home() {
-  const [nome, valor, qtd, updatenome, updatevalor, updateqtd] = Context();
   return (
     <div className='app'>
       <Seta></Seta>
@@ -109,7 +108,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-
+      <Rodape></Rodape>
     </div>
   )
 }

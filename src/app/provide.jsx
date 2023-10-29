@@ -7,18 +7,14 @@ export function Provider({ children }) {
   const [valor, setvalor] = useState("");
   const [qtd, seqtd] = useState("");
 
-  const updatenome = (newState) => {
-    setnome(newState);
-  };
-  const updatevalor = (newState) => {
-    setvalor(newState);
-  };
-  const updateqtd = (newState) => {
-    seqtd(newState);
-  };
+  const updateproduto = (newnovo, newvalor,newqtd) => {
+    setnome(newnovo);
+    setvalor(newvalor);
+    seqtd(newqtd);
 
+  };
   return (
-    <MyContext.Provider value={{nome, valor, qtd, updatenome, updatevalor, updateqtd}}>
+    <MyContext.Provider value={{nome, valor, qtd, updateproduto}}>
       {children}
     </MyContext.Provider>
   );

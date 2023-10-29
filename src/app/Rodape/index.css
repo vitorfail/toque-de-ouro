@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../Roboto/RobotoCondensed-Light.ttf");
+}
+
+.rodape{
+    margin-top: 70px;
+    font-size: 14px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+.rodape .inf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+    height: 80%;
+}
+.rodape .inf .colum, .rodape .inf .contato{
+    width: 200px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.rodape .inf .contato{
+    justify-content: space-between;
+}
+.rodape .inf .contato .linha{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.rodape .inf .contato .linha img{
+    margin-right: 10px;
+}
+.rodape .inf .colum p{
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.rodape .inf .colum p:nth-child(1){
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.rodape .copy{
+    border-top: 1.5px solid white;
+    padding-top: 25px;
+    width: 87%;
+}
