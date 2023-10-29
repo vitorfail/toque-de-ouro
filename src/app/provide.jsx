@@ -3,14 +3,22 @@ import { createContext, useState, useContext } from 'react';
 const MyContext = createContext();
 
 export function Provider({ children }) {
-  const [myState, setMyState] = useState("");
+  const [nome, setnome] = useState("");
+  const [valor, setvalor] = useState("");
+  const [qtd, seqtd] = useState("");
 
-  const updateState = (newState) => {
-    setMyState(newState);
+  const updatenome = (newState) => {
+    setnome(newState);
+  };
+  const updatevalor = (newState) => {
+    setvalor(newState);
+  };
+  const updateqtd = (newState) => {
+    seqtd(newState);
   };
 
   return (
-    <MyContext.Provider value={{ myState, updateState }}>
+    <MyContext.Provider value={{nome, valor, qtd, updatenome, updatevalor, updateqtd}}>
       {children}
     </MyContext.Provider>
   );
