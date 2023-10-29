@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("../Roboto/RobotoCondensed-Light.ttf");
-}
 
 .card{
     display: flex;

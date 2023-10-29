@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("../Roboto/RobotoCondensed-Light.ttf");
-}
 .seta{
-    font-family: "Roboto";
     font-size: 60px;
     rotate: 90deg;
     position: fixed;

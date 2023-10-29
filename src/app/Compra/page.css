@@ -1,26 +1,20 @@
 
-.header{
+.header.compra{
     transition: all ease 0.2s;
-    position: fixed;
+    position: absolute;
     top: 40px;
     z-index: 100;
     width: 100%;
     height: 100px;
-    color: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0);
     align-items: center;
     display: flex;
-}
-.header.show{
     color: rgb(0, 0, 0);
     background: white;
     top: 0;
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.288);
 }
-.header.show .item .titulo img {
-    opacity: 0;
-}
-.header.show .logo .img{
+
+.header.compra .logo .img{
     background: url("../image/logo1.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +23,7 @@
     height: 90px;
 
 }
-.mini-menu{
+.header.compra .mini-menu{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -37,7 +31,7 @@
     z-index: 120;
     background: rgba(0, 0, 0, 0.623);
 }
-.mini-menu .menu{
+.header.compra .mini-menu .menu{
     height: 90%;
     width: 50%;
     background: white;
@@ -45,7 +39,7 @@
     left: 0;
 }
 
-.header .logo .img{
+.header.compra .logo .img{
     margin-left: 100px;
     background: url("../image/logo2.png");
     background-repeat: no-repeat;
@@ -54,35 +48,35 @@
     width: 90px;
     height: 90px;
 }
-.header .logo{
+.header.compra .logo{
     justify-content: flex-start;
     display: flex;
     align-items: center;
     height: 100%;
     width: 35%;
 }
-.header .menu{
+.header.compra .menu{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 30%;
 }
-.header .aviso{
+.header.compra .aviso{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 35%;
     height: 100%;
 }
-.header .item{
+.header.compra .item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin: 2px;
 }
-.header span{
+.header.compra span{
     margin-top: -6px;
     margin-left: 7px;
     transition: all 0.3s ease-in-out;
@@ -90,13 +84,13 @@
     height: 1.5px;
     background: white;
 }
-.header .titulo:hover+ span{
+.header.compra .titulo:hover+ span{
     width: 80%;
 }
-.header .titulo p:hover+ img{
+.header.compra .titulo p:hover+ img{
     transform: rotate(0deg);
 }
-.header p{
+.header.compra p{
     font-weight: 580;
     font-size: 15px;
     line-height: 1.1;
@@ -105,15 +99,20 @@
     text-transform: uppercase;
     margin: 9px;
 }
-.header .item .titulo{
+.header.compra .item .titulo{
     align-items: center;
     display: flex;
 }
-.header .item .titulo img{
+.header.compra .item .titulo img{
     opacity: initial;
     transition: all 0.1s ease-in-out;
     margin-left: -7px;
     transform: rotate(-180deg);
+}
+.quebra{
+    width: 100%;
+    height: 80px;
+    background: rgb(241, 241, 241);
 }
 @media screen and (max-width:700px) {
     .header{

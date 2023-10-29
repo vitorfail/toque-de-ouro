@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("../Roboto/RobotoCondensed-Light.ttf");
-}
 
 .rodape{
     margin-top: 70px;
@@ -32,22 +28,21 @@
 .rodape .inf .contato{
     justify-content: space-between;
 }
-.rodape .inf .contato .linha{
+.rodape .inf .colum #linha{
     display: flex;
     width: 100%;
     height: auto;
 }
-.rodape .inf .contato .linha img{
+.rodape .inf .colum #linha img{
     margin-right: 10px;
 }
 .rodape .inf .colum p{
     margin-bottom: 12px;
     text-transform: uppercase;
 }
-.rodape .inf .colum p:nth-child(1){
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 30px;
+.rodape .inf .colum .titulo{
+    height: 29px;
+    margin-bottom: 25px;
 }
 .rodape .copy{
     border-top: 1.5px solid white;
