@@ -4,21 +4,25 @@ import { Header } from '../Header/Header'
 import Lista from "../image/list.png"
 import Logo from "../image/logo1.png"
 import li from '../menu';
+import { Context } from '../provide';
 import "./page.css"
+
 // eslint-disable-next-line import/no-webpack-loader-syntax
 
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from '../Seta';
 import { Rodape } from '../Rodape';
+import S from "../image/seta.png"
 
 export default function Home() {
+  const {nome, valor, qtd, url} =Context()
   return (
     <div className='app'>
       <Seta></Seta>
       <Header></Header>
       <div className='cabecalho'>
-        <Image style={{width:"20px", height:"20px"}} src={Lista}></Image>
-        <Image style={{width:"40px", height:"40px"}} src={Logo}></Image>
+        <Image alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
+        <Image alt='Logo' style={{width:"40px", height:"40px"}} src={Logo}></Image>
       </div>
       <div className="header compra">
             <div className="logo">
@@ -29,7 +33,7 @@ export default function Home() {
                 <div key={key} className="item">
                   <div className="titulo">
                     <p>{item}</p>
-                    <Image src={Seta} height={15} width={15}></Image>
+                    <Image alt='Seta' src={S} height={15} width={15}></Image>
                   </div>
                   <span className="linha"></span>
                 </div>
@@ -57,6 +61,9 @@ export default function Home() {
         </div>
       </section>
       <div className='quebra'></div>
+      <div className='produto'>
+        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={400} height={900}></Image>
+      </div>
       <Rodape></Rodape>
     </div>
   )

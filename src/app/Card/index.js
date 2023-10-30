@@ -1,17 +1,24 @@
 'use client';
 import "./index.css"
 import { Context } from "../provide";
+import { useRouter } from 'next/navigation';
+
 export function Card(props){
-    const {updateproduto} = Context();
-    return(
-      <div className="card" onClick={updateproduto(props.nome, props.preco, props.qtd)}>
-        <div className="modelo" style={{backgroundImage:`url(${props.url})`, backgroundRepeat:"no-repeat", backgroundPosition:"center"}}>
-          <div className="qtd">
-            <p>{props.qtd}</p>
-          </div>
+  const {updateproduto} = Context();
+  const router = useRouter();
+  function pagproduto(){
+    updateproduto(props.nome, props.preco, props.qtd, props.url)
+    router.push('/Compra');
+  }
+  return(
+    <div className="card" onClick={() => pagproduto()}>
+      <div className="modelo" style={{backgroundImage:`url(${props.url})`, backgroundRepeat:"no-repeat", backgroundPosition:"center"}}>
+        <div className="qtd">
+          <p>{props.qtd}</p>
         </div>
-        <p className="nome">{props.nome}</p>
-        <p className="preco">{props.preco}</p>
       </div>
-    )
+      <p className="nome">{props.nome}</p>
+      <p className="preco">{props.preco}</p>
+    </div>
+  )
 }

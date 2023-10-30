@@ -8,7 +8,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 import produtos from './produtos';
 import { useEffect, useState } from 'react';
-import { Card, Cards } from './Card';
+import {Card}  from './Card';
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN1NjI0ZjUifQ.dYaH3rrTcs8WwFHCHCSCRQ';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
@@ -23,8 +23,8 @@ export default function Home() {
       <Seta></Seta>
       <Header></Header>
       <div className='cabecalho'>
-        <Image style={{width:"20px", height:"20px"}} src={Lista}></Image>
-        <Image style={{width:"40px", height:"40px"}} src={Logo}></Image>
+        <Image alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
+        <Image alt='Logo' style={{width:"40px", height:"40px"}} src={Logo}></Image>
       </div>
       <section className='info'>
         <div className='whats'>
@@ -89,13 +89,13 @@ export default function Home() {
 
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxAccessToken={MAPBOX_TOKEN}>
-                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.22125098841004} longitude={-39.41171401554243}  kanchor="bottom" >
+                <Marker latitude={-7.22125098841004} longitude={-39.41171401554243}  anchor="bottom" >
                 </Marker>
-                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.232346847875012} longitude={-39.41059401579593}  kanchor="bottom" >
+                <Marker latitude={-7.232346847875012} longitude={-39.41059401579593}  anchor="bottom" >
                 </Marker>
-                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}}  latitude={-7.204351276105135} longitude={-39.318201469313834}  kanchor="bottom" >
+                <Marker  latitude={-7.204351276105135} longitude={-39.318201469313834}  anchor="bottom" >
                 </Marker>
-                <Marker className='img' style={{minHeight:'30px',minWidth:'30px'}} latitude={-7.206048803737471} longitude={-39.31790665397074}  kanchor="bottom" >
+                <Marker latitude={-7.206048803737471} longitude={-39.31790665397074}  anchor="bottom" >
                 </Marker>
           </ReactMapGL>
         </div>

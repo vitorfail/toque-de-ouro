@@ -41,7 +41,7 @@ export function Header(){
                 <div key={key} className="item">
                   <div className="titulo">
                     <p>{item}</p>
-                    <Image src={Seta} height={15} width={15}></Image>
+                    <Image alt="Seta" src={Seta} height={15} width={15}></Image>
                   </div>
                   <span className="linha"></span>
                 </div>
