@@ -4,14 +4,10 @@ const produtos = [
         qtd:"23 PEÇAS",
         nome:"CUECA POLLO",
         preco:"R$ 25,00",
-        url: Cueca.src
+        url: Cueca.src,
+        fornecedor:"Pollo",
+        tipo:"Cueca De Algodão"
     },
-    {
-        qtd:"23 PEÇAS",
-        nome:"CALÇINHA 073",
-        preco:"R$ 25,00",
-        url: Cueca.src
-    }
 
 ]
 export default produtos

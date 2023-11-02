@@ -13,9 +13,11 @@ import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from '../Seta';
 import { Rodape } from '../Rodape';
 import S from "../image/seta.png"
+import { useState } from 'react';
 
 export default function Home() {
   const {nome, valor, qtd, url} =Context()
+  const [quantidade, setquantidade] = useState(0)
   return (
     <div className='app'>
       <Seta></Seta>
@@ -62,7 +64,22 @@ export default function Home() {
       </section>
       <div className='quebra'></div>
       <div className='produto'>
-        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={400} height={900}></Image>
+        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={400} height={800}></Image>
+        <div className='descri'>
+          <p>Em estoque</p>
+          <p>CUECA POLLO</p>
+          <p>R$ 64,00</p>
+          <p>O que é oferecido nesta loja online? Nossas habilidades quase ilimitadas nos dão uma 
+            liberdade real. Na verdade o conceito de lingerie ser visualmente atraente foi um desenvolvimento.</p>
+          <p>Quantidade:</p>
+          <div className='aumentar'>
+            <p onClick={() => setquantidade(quantidade+1)}>-</p>
+            <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
+            <p onClick={() => setquantidade(quantidade-1)}>+</p>
+          </div>
+          <button>Compre</button>
+          <div className='barra'></div>
+        </div>
       </div>
       <Rodape></Rodape>
     </div>

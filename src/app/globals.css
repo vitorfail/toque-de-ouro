@@ -9,6 +9,11 @@
   font-family: "Roboto light";
   src: url("./Roboto/RobotoCondensed-Light.ttf");
 }
+
+@font-face {
+  font-family: "Playfair";
+  src: url("./Roboto/PlayfairDisplay-Regular.ttf");
+}
 .app{
   width: 100%;
   font-weight: 200;
