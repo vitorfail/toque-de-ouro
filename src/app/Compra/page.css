@@ -168,7 +168,7 @@
     text-align: center;
     width: 50px;
 }
-.produto .descri button{
+.produto .descri a{
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
     height: 60px;
@@ -178,7 +178,7 @@
     width: 100%;
     border: none;
 }
-.produto .descri button:hover{
+.produto .descri a:hover{
     background: rgb(238, 0, 0);
     cursor: pointer;
 }

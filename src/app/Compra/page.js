@@ -67,8 +67,8 @@ export default function Home() {
         <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={400} height={650}></Image>
         <div className='descri'>
           <p className='estoque'>Em estoque</p>
-          <p>CUECA POLLO</p>
-          <p>R$ 64,00</p>
+          <p>{nome} </p>
+          <p>{valor} </p>
           <p>O que é oferecido nesta loja online? Nossas habilidades quase ilimitadas nos dão uma 
             liberdade real. Na verdade o conceito de lingerie ser visualmente atraente foi um desenvolvimento.</p>
           <p>Quantidade:</p>
@@ -77,7 +77,7 @@ export default function Home() {
             <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
             <p onClick={() => setquantidade(quantidade+1)}>+</p>
           </div>
-          <button>Compre</button>
+          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5598981393182&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" de "+nome)}`}>Compre</a>
           <div className='barra'></div>
         </div>
       </div>
