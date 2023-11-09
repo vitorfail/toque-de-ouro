@@ -64,7 +64,7 @@ export default function Home() {
       </section>
       <div className='quebra'></div>
       <div className='produto'>
-        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={400} height={650}></Image>
+        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={450} height={650}></Image>
         <div className='descri'>
           <p className='estoque'>Em estoque</p>
           <p>{nome} </p>
@@ -77,7 +77,7 @@ export default function Home() {
             <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
             <p onClick={() => setquantidade(quantidade+1)}>+</p>
           </div>
-          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5598981393182&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" de "+nome)}`}>Compre</a>
+          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5598981393182&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" "+nome)}`}>Compre</a>
           <div className='barra'></div>
         </div>
       </div>

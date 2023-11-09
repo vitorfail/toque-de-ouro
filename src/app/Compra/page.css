@@ -173,10 +173,14 @@
     text-transform: uppercase;
     height: 60px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
     background: black;
     font-size: 20px;
+    text-decoration: none;
     width: 100%;
-    border: none;
 }
 .produto .descri a:hover{
     background: rgb(238, 0, 0);
