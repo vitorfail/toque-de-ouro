@@ -49,3 +49,16 @@
     padding-top: 25px;
     width: 87%;
 }
+@media screen and (max-width:600px){
+    .rodape .inf{
+        padding-top: 23px;
+        flex-direction: column;
+        height: auto;
+    }
+    .rodape{
+        height: auto;
+    }
+    .rodape .inf .colum{
+        margin-top: 20px;
+    }
+}

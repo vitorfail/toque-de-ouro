@@ -7,7 +7,8 @@ export function Card(props){
   const {updateproduto} = Context();
   const router = useRouter();
   function pagproduto(){
-    updateproduto(props.nome, props.preco, props.qtd, props.url)
+    console.log(props)
+    updateproduto(props.nome, props.preco, props.qtd, props.url, props.vendedor, props.tipo)
     router.push('/Compra');
   }
   return(

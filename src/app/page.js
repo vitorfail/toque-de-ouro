@@ -6,7 +6,7 @@ import Logo from "./image/logo1.png"
 import  ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
-import produtos from './produtos';
+import produtos_fav from './produtos_fav';
 import { useEffect, useState } from 'react';
 import {Card}  from './Card';
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml0b3JmYWlsIiwiYSI6ImNsOHhyajNjYjA4aXIzdW56ZDN1NjI0ZjUifQ.dYaH3rrTcs8WwFHCHCSCRQ';
@@ -103,8 +103,8 @@ export default function Home() {
       <div className='produto-destaque'>
           <p className='titulo'>PRODUTOS MAIS VENDIDOS</p>
           <div style={{width:"100%", display:"flex", justifyContent:"space-evenly"}}>
-            {produtos.map((item, index) => (
-              <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} ></Card>
+            {produtos_fav.map((item, index) => (
+              <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} vendedor={item.vendedor} tipo={item.tipo} ></Card>
             ))}
           </div>
         </div>

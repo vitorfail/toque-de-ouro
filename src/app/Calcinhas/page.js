@@ -6,6 +6,7 @@ import Logo from "../image/logo1.png"
 import li from '../menu';
 import { Context } from '../provide';
 import "./page.css"
+import calcinhas from '../calcinhas';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 
@@ -14,8 +15,9 @@ import Seta from '../Seta';
 import { Rodape } from '../Rodape';
 import S from "../image/seta.png"
 import { useState } from 'react';
+import { Card } from '../Card';
 
-export default function Home() {
+export default function calci() {
   const {nome, valor, qtd, url, vendedor, tipo} =Context()
   const [quantidade, setquantidade] = useState(0)
   return (
@@ -63,26 +65,13 @@ export default function Home() {
         </div>
       </section>
       <div className='quebra'></div>
-      <div className='produto'>
-        <Image style={{background:"#bec0c4"}} alt='Url' src={url} width={450} height={650}></Image>
-        <div className='descri'>
-          <p className='estoque'>Em estoque</p>
-          <p className='nome'>{nome} </p>
-          <p className='valor'>{valor} </p>
-          <p>O que é oferecido nesta loja online? Nossas habilidades quase ilimitadas nos dão uma 
-            liberdade real. Na verdade o conceito de lingerie ser visualmente atraente foi um desenvolvimento.</p>
-          <p>Quantidade:</p>
-          <div className='aumentar'>
-            <p onClick={() =>quantidade==0?setquantidade(0): setquantidade(quantidade+1)}>--</p>
-            <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
-            <p onClick={() => setquantidade(quantidade+1)}>+</p>
-          </div>
-          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5598981393182&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" "+nome)}`}>Compre</a>
-          <div className='barra'></div>
-          <div className='informa'>
-              <p>Vendedor: {vendedor}</p>
-              <p>Tipo: {tipo}</p>          
-          </div>
+      <div className='campo'>
+        <p className='titulo'>Calcinhas</p>
+        <div className='tabelas'></div>
+        <div className='cards'>
+          {calcinhas.map((item, index) => (
+            <Card key={index} url={item.url} qtd={item.qtd} preco={item.preco} nome={item.nome} vendedor={item.vendedor} tipo={item.tipo}></Card>
+          ))}
         </div>
       </div>
       <Rodape></Rodape>
