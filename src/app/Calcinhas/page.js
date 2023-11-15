@@ -4,7 +4,6 @@ import { Header } from '../Header/Header'
 import Lista from "../image/list.png"
 import Logo from "../image/logo1.png"
 import li from '../menu';
-import { Context } from '../provide';
 import "./page.css"
 import calcinhas from '../calcinhas';
 
@@ -14,12 +13,9 @@ import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from '../Seta';
 import { Rodape } from '../Rodape';
 import S from "../image/seta.png"
-import { useState } from 'react';
 import { Card } from '../Card';
 
 export default function calci() {
-  const {nome, valor, qtd, url, vendedor, tipo} =Context()
-  const [quantidade, setquantidade] = useState(0)
   return (
     <div className='app'>
       <Seta></Seta>
