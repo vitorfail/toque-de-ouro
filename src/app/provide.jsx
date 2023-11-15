@@ -9,6 +9,7 @@ export function Provider({ children }) {
   const [url, seturl] = useState("");
   const [vendedor, setvendedor] = useState("");
   const [tipo, settipo] = useState("");
+  const [catalogo, setcatalogo]= useState(true)
 
   const updateproduto = (newnovo, newvalor,newqtd, newproduto, newvendedor, newtipo) => {
     setnome(newnovo);
@@ -19,7 +20,7 @@ export function Provider({ children }) {
     settipo(newtipo);
   };
   return (
-    <MyContext.Provider value={{nome, valor, qtd, url,vendedor, tipo, updateproduto}}>
+    <MyContext.Provider value={{nome, valor, qtd, url,vendedor, tipo, catalogo, updateproduto, setcatalogo}}>
       {children}
     </MyContext.Provider>
   );

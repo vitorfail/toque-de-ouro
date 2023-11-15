@@ -6,8 +6,8 @@ const produtos_fav = [
         preco:"R$25,00",
         url: Cueca.src,
         fornecedor:"Pollo",
+        vendedor: "Loja do Crato",
         tipo:"Cueca De Algodão",
-        vendedor: "Loja do Crato"
     },
 
 ]

@@ -37,15 +37,29 @@ export function Header(){
                 <div className="img"></div>
             </div>
             <div className="menu">
-              {li.map((item, key) => (
-                <div key={key} className="item">
+              {li.map((item, key) => {
+                if(key === 1){
+                return(<div key={key} className="item">
                   <div className="titulo">
                     <p>{item}</p>
                     <Image alt="Seta" src={Seta} height={15} width={15}></Image>
+                    <div className="catalogo_lista">
+                        <div className="colum">
+                            <p>Catalogo #1</p>
+                        </div>
+                    </div>
                   </div>
                   <span className="linha"></span>
-                </div>
-              ))}
+                </div>)}
+                else{
+                  return(<div key={key} className="item">
+                    <div className="titulo">
+                      <p>{item}</p>
+                      <Image alt="Seta" src={Seta} height={15} width={15}></Image>
+                    </div>
+                    <span className="linha"></span>
+                  </div>)}
+              })}
             </div>
             <div className="aviso">
               Compra agora!
