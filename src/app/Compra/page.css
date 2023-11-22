@@ -14,12 +14,14 @@
     height: 90%; 
 }
 .produto .descri .estoque{
-    background: rgb(5, 100, 48);
+    background: #44bb9e;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
+    width: 90px;
+    height: 20px;
+    font-size: 15px;
 }
 .produto .descri .nome{
     font-family: "Playfair";
@@ -205,5 +207,46 @@
     }
     .header.show{
         display:none;
+    }
+    .produto{
+        flex-direction: column;
+        display: flex;
+        height: auto;
+    }
+    .produto img{
+        margin-top: 30px;
+        height: auto;
+        width: 95%;
+    }
+    .produto .descri{
+        margin-top: 20px;
+        padding-top: 70px;
+        padding: 10px;
+        height: 607px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .produto .descri p:nth-child(4){
+        font-size: 15px;
+        text-align: justify;
+    }
+    .produto .descri p:nth-child(5){
+        margin-bottom: -25px;
+    }
+    .produto .descri .nome{
+        font-size: 30px;
+    }
+    .header.compra{
+        display: none;
+    }
+    .produto .descri .valor {
+        font-size: 20px;
+    }
+    .produto .descri a {
+        font-size: 15px;
+        height: 50px;
+    }
+    .produto .aumentar {
+        height: 42px;
     }
 }

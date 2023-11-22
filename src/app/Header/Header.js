@@ -5,10 +5,11 @@ import li from "../menu";
 import Seta from "../image/seta.png"
 import Logo from "../image/logo2.png"
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export function Header(){
     const [head, sethead] = useState(false)
-    
+    const router = useRouter();
     const scrollevent = () =>{
       if(window.scrollY> 10){
         sethead(true)
@@ -51,11 +52,17 @@ export function Header(){
                   </div>
                   <span className="linha"></span>
                 </div>)}
+                if(key === 0){
+                  return(<div key={key} className="item" onClick={() => router.push("/")}>
+                    <div className="titulo">
+                      <p>{item}</p>
+                    </div>
+                    <span className="linha"></span>
+                  </div>)}
                 else{
                   return(<div key={key} className="item">
                     <div className="titulo">
                       <p>{item}</p>
-                      <Image alt="Seta" src={Seta} height={15} width={15}></Image>
                     </div>
                     <span className="linha"></span>
                   </div>)}

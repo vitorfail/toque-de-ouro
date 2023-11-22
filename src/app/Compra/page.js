@@ -6,6 +6,7 @@ import Logo from "../image/logo1.png"
 import li from '../menu';
 import { Context } from '../provide';
 import "./page.css"
+import { useRouter } from 'next/navigation';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 
@@ -17,6 +18,8 @@ import { useState } from 'react';
 
 export default function Home() {
   const {nome, valor, qtd, url, vendedor, tipo} =Context()
+  const router = useRouter();
+
   const [quantidade, setquantidade] = useState(0)
   return (
     <div className='app'>
@@ -31,15 +34,30 @@ export default function Home() {
                 <div className="img"></div>
             </div>
             <div className="menu">
-              {li.map((item, key) => (
-                <div key={key} className="item">
-                  <div className="titulo">
-                    <p>{item}</p>
-                    <Image alt='Seta' src={S} height={15} width={15}></Image>
+              {li.map((item, key) => {
+                if(key ===0){
+                  return(
+                  <div key={key} className="item" onClick={() => router.push("/")}>
+                    <div className="titulo">
+                      <p>{item}</p>
+                      <Image alt='Seta' src={S} height={15} width={15}></Image>
+                    </div>
+                    <span className="linha"></span>
                   </div>
-                  <span className="linha"></span>
-                </div>
-              ))}
+                  )
+                }
+                else{
+                  return(
+                    <div key={key} className="item">
+                      <div className="titulo">
+                        <p>{item}</p>
+                        <Image alt='Seta' src={S} height={15} width={15}></Image>
+                      </div>
+                      <span className="linha"></span>
+                    </div>
+                    )  
+                }
+              })}
             </div>
       </div>
             <div className="aviso">

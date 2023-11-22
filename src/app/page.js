@@ -16,8 +16,10 @@ mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from './Seta';
 import { Rodape } from './Rodape';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router =useRouter()
   return (
     <div className='app'>
       <Seta></Seta>
@@ -51,10 +53,10 @@ export default function Home() {
         <p>EXPLORE E ESCOLHA</p>
         <p>CATÁLOGO</p>
         <div className='roupas'>
-          <div className="exibir" >
+          <div className="exibir" onClick={() => router.push("/Calcinhas")} >
             <div className='hover'>
               <div className='text'>
-                <p>SUTIÃNS</p>
+                <p>Calcinhas</p>
               </div>
             </div>
           </div>
