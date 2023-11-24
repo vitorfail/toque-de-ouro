@@ -1,11 +1,12 @@
-.menu{
+.minimenu{
     z-index: 10;
     width: 100%;
     height: 100%;
+    display: none;
     position: fixed;
     background: rgba(0, 0, 0, 0.322);
 }
-.menu .barra{
+.minimenu .barra{
     flex-direction: column;
     display: flex;
     align-items: flex-start;
@@ -14,7 +15,7 @@
     width: 300px;
     background: white;
 }
-.menu .barra .op{
+.minimenu .barra .op{
     flex-direction: column;
     display: flex;
     align-items: flex-start;
@@ -22,17 +23,20 @@
 
     height: 240px;
 }
-.menu .barra .fechar{
+.minimenu .barra .fechar{
     color: rgba(0, 0, 0, 0.5);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
-.menu .barra .fechar, .menu .barra .op{
+.minimenu .barra .fechar, .minimenu .barra .op{
     margin-top: 30px;
     padding-left: 20px;
 }
-.menu .barra .op p{
+.minimenu .barra .op p{
     font-weight: 600;
     font-family: "Playfair";
     font-size: 25px;
+}
+.minimenu.show{
+    display: flex;
 }

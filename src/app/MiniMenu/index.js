@@ -7,7 +7,7 @@ import { Context } from "../provide";
 export default function MiniMenu() {
   const {menu, setmenu} = Context()
   return (
-    <div className={menu?"menu": "menu show"}>
+    <div className={menu?"minimenu show": "minimenu"}>
       <div className="barra">
         <p className="fechar" onClick={() => setmenu(false)}>x</p>
         <div className="op">

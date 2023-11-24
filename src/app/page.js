@@ -17,15 +17,17 @@ import {AiFillInstagram, AiFillYoutube, AiFillFacebook} from "react-icons/ai"
 import Seta from './Seta';
 import { Rodape } from './Rodape';
 import { useRouter } from 'next/navigation';
+import { Context } from './provide';
 
 export default function Home() {
   const router =useRouter()
+  const {setmenu} = Context()
   return (
     <div className='app'>
       <Seta></Seta>
       <Header></Header>
       <div className='cabecalho'>
-        <Image alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
+        <Image onClick={()=> setmenu(true)} alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
         <Image alt='Logo' style={{width:"40px", height:"40px"}} src={Logo}></Image>
       </div>
       <section className='info'>
