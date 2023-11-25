@@ -89,7 +89,7 @@ export default function Home() {
             <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
             <p onClick={() => setquantidade(quantidade+1)}>+</p>
           </div>
-          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5598981393182&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" "+nome)}`}>Compre</a>
+          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5588999308692&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" "+nome)}`}>Compre</a>
           <div className='barra'></div>
           <div className='informa'>
               <p>Vendedor: {vendedor}</p>
