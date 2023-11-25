@@ -1,8 +1,6 @@
 "use client";
 import Image from 'next/image'
 import { Header } from './Header/Header'
-import Lista from "./image/list.png"
-import Logo from "./image/logo1.png"
 import  ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
@@ -26,10 +24,7 @@ export default function Home() {
     <div className='app'>
       <Seta></Seta>
       <Header></Header>
-      <div className='cabecalho'>
-        <Image onClick={()=> setmenu(true)} alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
-        <Image alt='Logo' style={{width:"40px", height:"40px"}} src={Logo}></Image>
-      </div>
+
       <section className='info'>
         <div className='whats'>
           <p> (88) 9878-9999</p>

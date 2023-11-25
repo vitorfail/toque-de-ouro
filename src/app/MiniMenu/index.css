@@ -5,6 +5,7 @@
     display: none;
     position: fixed;
     background: rgba(0, 0, 0, 0.322);
+
 }
 .minimenu .barra{
     flex-direction: column;
@@ -12,8 +13,9 @@
     align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
-    width: 300px;
+    width: 250px;
     background: white;
+    animation: surgir linear 0.4s;
 }
 .minimenu .barra .op{
     flex-direction: column;
@@ -39,4 +41,12 @@
 }
 .minimenu.show{
     display: flex;
+}
+@keyframes surgir {
+    0%{
+        margin-left: -300px;
+    }
+    100%{
+        margin-left: 0px;
+    }
 }

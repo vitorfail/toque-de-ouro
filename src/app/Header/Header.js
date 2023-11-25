@@ -3,13 +3,17 @@ import Image from "next/image"
 import "./Header.css"
 import li from "../menu";
 import Seta from "../image/seta.png"
-import Logo from "../image/logo2.png"
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import { Context } from "../provide";
+import Lista from "../image/list.png"
+import Logo from "../image/logo1.png"
+
 
 export function Header(){
     const [head, sethead] = useState(false)
     const router = useRouter();
+    const { setmenu} = Context()
     const scrollevent = () =>{
       if(window.scrollY> 10){
         sethead(true)
@@ -71,6 +75,10 @@ export function Header(){
             <div className="aviso">
               Compra agora!
             </div>
+        </div>
+        <div className='cabecalho'>
+          <Image onClick={()=> setmenu(true)} alt='Lista' style={{width:"20px", height:"20px"}} src={Lista}></Image>
+          <Image alt='Logo' style={{width:"40px", height:"40px"}} src={Logo}></Image>
         </div>
       </div>
     )

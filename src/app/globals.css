@@ -19,22 +19,7 @@
   font-weight: 200;
   height: 100%;
 }
-.app .cabecalho{
-  justify-content: space-between;
-  align-items: center;
-  display: none;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  height: 60px;
-  background: white;
-}
-.app .cabecalho img:nth-child(1){
-  margin-left: 20px;
-}
-.app .cabecalho img:nth-child(2){
-  margin-right: 20px;
-}
+
 .app .info{
   width: 100%;
   display: flex;
@@ -286,7 +271,5 @@
     margin-right: 40px;
     text-align: justify;
   }
-  .app .cabecalho{
-    display: flex;
-  }
+
 }

@@ -135,6 +135,26 @@
 .catalogo_lista.show{
     display: flex;
 }
+.cabecalho{
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    background: white;
+  }
+.cabecalho img:nth-child(1){
+    transition: all 0.2s ease-in-out;
+    margin-left: 20px;
+}
+.cabecalho img:nth-child(1):focus{
+    transform: rotate(-180deg);
+}
+.cabecalho img:nth-child(2){
+    margin-right: 20px;
+}
 @keyframes aparecer{
     0%{
         opacity:0;
@@ -153,4 +173,7 @@
     .header.show{
         display:none;
     }
+    .cabecalho{
+        display: flex;
+      }
 }
