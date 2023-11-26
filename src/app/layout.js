@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Provider } from './provide'
 import MiniMenu from './MiniMenu'
 import { Sacola } from './Sacola'
+import Popup_Sacola from './Popup_Sacola'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Provider>
           <Sacola></Sacola>
+          <Popup_Sacola></Popup_Sacola>
           <MiniMenu></MiniMenu>
           {children}
         </Provider>

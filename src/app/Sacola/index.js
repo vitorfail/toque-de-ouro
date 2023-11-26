@@ -6,7 +6,7 @@ import S from "../image/sacola.png"
 import { useState, useEffect } from "react";
 
 export function Sacola(){
-  const {quantidade_sacola}= Context()
+  const {sacola, quantidade_sacola, setpopup_sacola}= Context()
   const [head, sethead] = useState(false)
     const scrollevent = () =>{
     if(window.scrollY> 10){
@@ -29,7 +29,7 @@ export function Sacola(){
   return(
     <div className={head?"sacola":"sacola down"} >
       <p>{quantidade_sacola}</p>
-      <div className="imagem">
+      <div className="imagem" onClick={() => setpopup_sacola(true)}>
         <Image width={40} height={40} alt="sacola" src={S}></Image>
       </div>
     </div>

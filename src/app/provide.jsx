@@ -13,6 +13,7 @@ export function Provider({ children }) {
   const [catalogo, setcatalogo]= useState(true)
   const [menu, setmenu]= useState(false)
   const [sacola, setsacola]= useState([])
+  const [popup_sacola, setpopup_sacola]= useState(false)
 
   const updateproduto = (newnovo, newvalor,newqtd, newproduto, newvendedor, newtipo) => {
     setnome(newnovo);
@@ -23,7 +24,7 @@ export function Provider({ children }) {
     settipo(newtipo);
   };
   return (
-    <MyContext.Provider value={{nome, valor, qtd, url,vendedor, tipo, catalogo, menu, sacola, quantidade_sacola,updateproduto, setcatalogo, setmenu, setsacola, setquantidade_sacola}}>
+    <MyContext.Provider value={{nome, valor, qtd, url,vendedor, tipo, catalogo, menu, sacola, quantidade_sacola,updateproduto, setcatalogo, setmenu, setsacola, setquantidade_sacola, popup_sacola, setpopup_sacola}}>
       {children}
     </MyContext.Provider>
   );
