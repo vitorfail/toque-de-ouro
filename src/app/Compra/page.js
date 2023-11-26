@@ -15,10 +15,13 @@ import S from "../image/seta.png"
 import { useState } from 'react';
 
 export default function Home() {
-  const {nome, valor, qtd, url, vendedor, tipo} =Context()
+  const {nome, valor, url, vendedor, tipo, sacola,setsacola, quantidade_sacola,setquantidade_sacola} =Context()
   const router = useRouter();
-
   const [quantidade, setquantidade] = useState(0)
+  function add_sacola(){
+    setsacola([...sacola, {n:nome, v:valor, qtd:quantidade}])
+    setquantidade_sacola(quantidade_sacola +quantidade)
+  }
   return (
     <div className='app'>
       <Seta></Seta>
@@ -89,6 +92,7 @@ export default function Home() {
             <input value={quantidade} onChange={(e) => setquantidade(e.target.value)}></input>
             <p onClick={() => setquantidade(quantidade+1)}>+</p>
           </div>
+          <button target="_blank" onClick={() => add_sacola()} >Adiconar a sacola</button>
           <a target="_blank" href={`https://api.whatsapp.com/send?phone=5588999308692&text=${encodeURIComponent("Olá, gostaria de "+quantidade+" "+nome)}`}>Compre</a>
           <div className='barra'></div>
           <div className='informa'>

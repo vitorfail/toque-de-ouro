@@ -1,0 +1,54 @@
+.sacola{
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    right: 23px;
+    bottom: 100px;
+}
+.sacola p{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    z-index: 10;
+    color: white;
+    background: rgb(190, 0, 0);
+}
+.sacola p, .sacola .imagem{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
+
+}
+.sacola .imagem{
+    background: rgb(255, 196, 0);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.sacola.down{
+    bottom: 10px;
+}
+@media screen and (max-width:700px) {
+    .sacola .imagem{
+        position: absolute;
+        right: -20px;
+        scale: 0.9;
+    }
+    .sacola p{
+        margin-right: 34px;
+        bottom: 80px;
+        right: -30px;
+        position: fixed;
+        right: 0;
+    }
+    .sacola.down{
+        bottom: 100px;
+    }
+}

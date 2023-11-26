@@ -3,6 +3,7 @@
     rotate: 90deg;
     position: fixed;
     bottom: 23px;
+    animation: apa linear 0.2s;
     transition: all 0.2s ease-in-out;
     background: black;
     color: white;
@@ -28,5 +29,13 @@
 @media (max-width:500px){
     .seta.show{
         display: none;
+    }
+}
+@keyframes apa {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
     }
 }
