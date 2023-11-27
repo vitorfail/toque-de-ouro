@@ -8,8 +8,8 @@ export default function Popup_Sacola(){
     const {sacola, popup_sacola, setpopup_sacola} = Context()
     function criar_testo(){
         var t = ""
-        for(var i=0; i++; i<sacola.length){
-            t= t + sacola[i].qtd +" Peças de "+ sacola[i].n + "%0D"
+        for(var i=0; i<sacola.length;i++ ){
+            t= t + sacola[i].qtd +" Peças de "+ sacola[i].n + "%0A"
         }
         return t
     }
@@ -26,7 +26,7 @@ export default function Popup_Sacola(){
                         <p>Peças</p>
                     </div>
                 </div>))}
-                <a target="_blank" href={`https://api.whatsapp.com/send?phone=5588999308692&text=${encodeURIComponent("Olá, minha lista de compras:%0D"+ criar_testo())}`}>Falar com o vendedor</a>
+                <a target="_blank" href={`https://api.whatsapp.com/send?phone=5588999308692&text=${encodeURIComponent("Olá, minha lista de compras:%0A"+ criar_testo())}`}>Falar com o vendedor</a>
             </div>
         </div>
     )
