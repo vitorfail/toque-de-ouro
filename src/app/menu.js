@@ -1,2 +1,2 @@
-const li = ["Home", "Catalogos", "Sobre nós", "Lingiries", "Camisolas"]
+const li = ["Home", "Catalogos", "Sobre", "Lingiries", "Camisolas"]
 export default li
